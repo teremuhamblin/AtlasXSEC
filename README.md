@@ -1,4 +1,4 @@
-# 🛡️ AtlaXSec
+# 🛡️ AtlaXSEC
 - Sécurité Android nouvelle génération
 - Protection intelligente, analyse avancée, confidentialité totale
 
@@ -44,7 +44,7 @@
 ---
 
 ### 📦 Installation
-1. Télécharge le fichier [NomDeTonApp].apk depuis la page officielle.  
+1. Télécharge le fichier AtlaXSEC.apk depuis la page officielle.  
 2. Active l’installation depuis sources inconnues dans les paramètres Android.  
 3. Ouvre l’APK et installe l’application.  
 4. Lance l’application et configure la protection selon tes besoins.
