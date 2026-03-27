@@ -7,7 +7,7 @@ Security-APK/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── AndroidManifest.xml
-│   │   │   ├── java/com/teremu/securityapp/
+│   │   │   ├── src/main/java/com/themaddogtmdg/securityapp/
 │   │   │   │   ├── ui/
 │   │   │   │   ├── viewmodel/
 │   │   │   │   ├── di/
@@ -22,7 +22,7 @@ Security-APK/
 │   └── build.gradle
 │
 ├── security-engine/
-│   ├── src/main/java/com/teremu/securityengine/
+│   ├── src/main/java/com/themaddogtmdg/securityengine/
 │   │   ├── crypto/
 │   │   ├── detection/
 │   │   ├── network/
@@ -32,14 +32,14 @@ Security-APK/
 │   └── build.gradle
 │
 ├── security-services/
-│   ├── src/main/java/com/teremu/securityservices/
+│   ├── src/main/java/com/themaddogtmdg/securityservices/
 │   │   ├── monitoring/
 │   │   ├── background/
 │   │   └── alerts/
 │   └── build.gradle
 │
 ├── forensic-core/
-│   ├── src/main/java/com/teremu/forensiccore/
+│   ├── src/main/java/com/themaddogtmdg/forensiccore/
 │   │   ├── artifacts/
 │   │   ├── timeline/
 │   │   ├── fileanalysis/
@@ -48,7 +48,7 @@ Security-APK/
 │   └── build.gradle
 │
 ├── reports/
-│   ├── src/main/java/com/teremu/reports/
+│   ├── src/main/java/com/themaddogtmdg/reports/
 │   │   ├── pdf/
 │   │   ├── json/
 │   │   ├── html/
@@ -57,7 +57,7 @@ Security-APK/
 │   └── build.gradle
 │
 ├── sandbox/
-│   ├── src/main/java/com/teremu/sandbox/
+│   ├── src/main/java/com/themaddogtmdgsandbox/
 │   │   ├── isolation/
 │   │   ├── integrity/
 │   │   ├── virtualization/
