@@ -1,4 +1,4 @@
-# 🛡️ [Nom de ton application]
+# 🛡️ AtlaXSec
 - Sécurité Android nouvelle génération
 - Protection intelligente, analyse avancée, confidentialité totale
 
@@ -105,7 +105,8 @@ Les contributions sont ouvertes :
 ---
 
 ### 📄 Licence
-Indique ici la licence choisie (MIT, Apache 2.0, GPL…).
+BSL V1.0 - August 17th 2003
+- Boost Software License
 
 ---
 
