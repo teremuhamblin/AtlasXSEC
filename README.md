@@ -1,7 +1,6 @@
----
-
 🛡️ [Nom de ton application]
-Sécurité Android nouvelle génération — Protection intelligente, analyse avancée, confidentialité totale
+Sécurité Android nouvelle génération
+- Protection intelligente, analyse avancée, confidentialité totale
 
 🌐 Vision et mission
 L’application s’inscrit dans une approche moderne de la cybersécurité mobile : offrir à chaque utilisateur un contrôle total sur son appareil, une visibilité complète sur les risques, et une protection continue sans sacrifier la performance ni la confidentialité.  
