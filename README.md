@@ -1,5 +1,5 @@
 🛡️ [Nom de ton application]
-Sécurité Android nouvelle génération
+- Sécurité Android nouvelle génération
 - Protection intelligente, analyse avancée, confidentialité totale
 
 🌐 Vision et mission
