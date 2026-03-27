@@ -1,4 +1,5 @@
-📁 Arborescence recommandée (projet Kotlin + AndroidX + MVVM + modules sécurité)
+📁 Arborescence recommandée 
+- (projet Kotlin + AndroidX + MVVM + modules sécurités)
 
 Security-APK/
 │
@@ -8,33 +9,59 @@ Security-APK/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   ├── java/com/teremu/securityapp/
 │   │   │   │   ├── ui/
-│   │   │   │   ├── viewmodel/ 
-│   │   │   │   ├── di/ 
-│   │   │   │   ├── navigation/ 
+│   │   │   │   ├── viewmodel/
+│   │   │   │   ├── di/
+│   │   │   │   ├── navigation/
 │   │   │   │   ├── utils/
-│   │   │   │   ├── core/ 
-│   │   │   │   └── SecurityApp.kt 
-│   │   │   ├── res/                  
-│   │   │   └── assets/               
-│   │   └── test/                    
+│   │   │   │   ├── core/
+│   │   │   │   └── SecurityApp.kt
+│   │   │   ├── res/
+│   │   │   └── assets/
+│   │   └── test/
 │   │
 │   └── build.gradle
 │
-├── security-engine/              
-│   ├──src/main/java/com/teremu/securityengine/
+├── security-engine/
+│   ├── src/main/java/com/teremu/securityengine/
 │   │   ├── crypto/
-│   │   ├── detection/             
-│   │   ├── network/               
-│   │   ├── storage/              
-│   │   ├── auth/                
+│   │   ├── detection/
+│   │   ├── network/
+│   │   ├── storage/
+│   │   ├── auth/
 │   │   └── SecurityEngine.kt
 │   └── build.gradle
 │
-├── security-services/          
-│   ├──src/main/java/com/teremu/securityservices/
-│   │   ├── monitoring/           
-│   │   ├── background/            
-│   │   └── alerts/               
+├── security-services/
+│   ├── src/main/java/com/teremu/securityservices/
+│   │   ├── monitoring/
+│   │   ├── background/
+│   │   └── alerts/
+│   └── build.gradle
+│
+├── forensic-core/
+│   ├── src/main/java/com/teremu/forensiccore/
+│   │   ├── artifacts/
+│   │   ├── timeline/
+│   │   ├── fileanalysis/
+│   │   ├── metadata/
+│   │   └── ForensicCore.kt
+│   └── build.gradle
+│
+├── reports/
+│   ├── src/main/java/com/teremu/reports/
+│   │   ├── pdf/
+│   │   ├── json/
+│   │   ├── html/
+│   │   ├── templates/
+│   │   └── ReportGenerator.kt
+│   └── build.gradle
+│
+├── sandbox/
+│   ├── src/main/java/com/teremu/sandbox/
+│   │   ├── isolation/
+│   │   ├── integrity/
+│   │   ├── virtualization/
+│   │   └── SandboxManager.kt
 │   └── build.gradle
 │
 ├── build.gradle
