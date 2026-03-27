@@ -1,1 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.themaddogtmdg.securityapp">
 
+    <!-- Permissions générales -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Permissions forensic / analyse -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <!-- Permissions biométriques -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <!-- Permissions système (si root detection avancée) -->
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" tools:ignore="UnknownPermission" />
+
+    <application
+        android:name=".SecurityApp"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:label="AtlasXSEC"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SecurityApp"
+        android:exported="false">
+
+        <!-- Activity principale -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Services de sécurité -->
+        <service
+            android:name="com.themaddogtmdg.securityservices.monitoring.IntegrityMonitoringService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync|connectedDevice" />
+
+        <service
+            android:name="com.themaddogtmdg.securityservices.background.PersistentSecurityService"
+            android:exported="false"
+            android:foregroundServiceType="location|dataSync" />
+
+        <service
+            android:name="com.themaddogtmdg.securityservices.alerts.SecurityAlertService"
+            android:exported="false" />
+
+        <!-- Sandbox interne -->
+        <service
+            android:name="com.themaddogtmdgsandbox.SandboxManager"
+            android:exported="false" />
+
+        <!-- Provider pour rapports / fichiers forensic -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.themaddogtmdg.securityapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
