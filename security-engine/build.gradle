@@ -1,1 +1,16 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
 
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    // Crypto
+    implementation "org.bouncycastle:bcprov-jdk18on:1.77"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
+
+    // Network (TLS, pinning)
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+}
