@@ -2,40 +2,64 @@
 
 Security-APK/
 │
-├── app/                         # Module principal Android
+├── app/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   ├── java/com/teremu/securityapp/
-│   │   │   │   ├── ui/               # Activités, fragments, écrans
-│   │   │   │   ├── viewmodel/        # Logique MVVM
-│   │   │   │   ├── di/               # Injection de dépendances (Hilt/Koin)
-│   │   │   │   ├── navigation/       # Graph de navigation
-│   │   │   │   ├── utils/            # Helpers génériques
-│   │   │   │   ├── core/             # Classes de base (BaseActivity, BaseVM…)
-│   │   │   │   └── SecurityApp.kt    # Application principale
-│   │   │   ├── res/                  # Layouts, drawables, strings
-│   │   │   └── assets/               # Certificats, règles, signatures
-│   │   └── test/                     # Tests unitaires
+│   │   │   │   ├── ui/
+│   │   │   │   ├── viewmodel/ 
+│   │   │   │   ├── di/ 
+│   │   │   │   ├── navigation/ 
+│   │   │   │   ├── utils/
+│   │   │   │   ├── core/ 
+│   │   │   │   └── SecurityApp.kt 
+│   │   │   ├── res/                  
+│   │   │   └── assets/               
+│   │   └── test/                    
 │   │
 │   └── build.gradle
 │
-├── security-engine/              # Module dédié à la sécurité
-│   ├── src/main/java/com/teremu/securityengine/
-│   │   ├── crypto/                # Chiffrement, signatures, hashing
-│   │   ├── detection/             # Détection root, debug, tampering
-│   │   ├── network/               # Sécurité réseau (TLS pinning)
-│   │   ├── storage/               # SecureStorage (EncryptedSharedPrefs)
-│   │   ├── auth/                  # MFA, biométrie
+├── security-engine/              
+│   ├──src/main/java/com/teremu/securityengine/
+│   │   ├── crypto/
+│   │   ├── detection/             
+│   │   ├── network/               
+│   │   ├── storage/              
+│   │   ├── auth/                
 │   │   └── SecurityEngine.kt
 │   └── build.gradle
 │
-├── security-services/            # Services Android (foreground, monitoring)
-│   ├── src/main/java/com/teremu/securityservices/
-│   │   ├── monitoring/            # Surveillance d’intégrité
-│   │   ├── background/            # Services persistants
-│   │   └── alerts/                # Notifications de sécurité
+├── security-services/          
+│   ├──src/main/java/com/teremu/securityservices/
+│   │   ├── monitoring/           
+│   │   ├── background/            
+│   │   └── alerts/               
 │   └── build.gradle
 │
 ├── build.gradle
 └── settings.gradle
+
+📁 Explications recommandées
+
+├── app/ Module principal Android
+├── ui/ Activités, fragments, écrans
+├── viewmodel/ Logique MVVM
+├── di/ Injection de dépendances (Hilt/Koin)
+├── navigation/ Graph de navigation
+├── utils/ Helpers généric
+├── core/ Classes de base (BaseActivity, BaseVM…)
+└── SecurityApp.kt Application principale
+├── res/ Layouts, drawables, strings
+└── assets/ Certificats, règles, signatures
+└── test/ Tests unitaires
+├── security-engine/ Module dédié à la sécurité
+├── crypto/ Chiffrement, signatures, hashing
+├── detection/ Détection root, debug, tampering
+├── network/ Sécurité réseau (TLS pinning)
+├── storage/ SecureStorage (EncryptedSharedPrefs)
+├── auth/ MFA, biométrie
+├── security-services/ Services Android (foreground)
+├── monitoring/ Surveillance d’intégrité
+├── background/ Services persistants
+└── alerts/ Notifications de sécurité
