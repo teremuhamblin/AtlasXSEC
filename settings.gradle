@@ -1,1 +1,8 @@
+rootProject.name = "Security-APK"
 
+include(":app")
+include(":security-engine")
+include(":security-services")
+include(":forensic-core")
+include(":reports")
+include(":sandbox")
