@@ -1,5 +1,3 @@
----
-
 📘 19manifestguide.md — Guide du Manifeste Central AtlasXSEC
 
 Rôle du manifeste
