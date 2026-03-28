@@ -1,0 +1,125 @@
+Voici un fichier complet atlasxseccliguide.txt, rédigé comme un vrai manuel d’utilisation pour ta future CLI AtlasXSEC.  
+Il explique clairement les langages utilisés, la logique de la CLI, les commandes disponibles et la philosophie générale de l’outil.
+
+Tu peux le placer dans docs/ ou tools/.
+
+---
+
+atlasxseccliguide.txt
+
+Introduction
+AtlasXSEC utilise une suite de scripts d’automatisation écrits dans plusieurs langages de programmation. Cette diversité permet une compatibilité maximale entre systèmes (Linux, macOS, Windows), environnements CI/CD, et contextes industriels variés.  
+Ce guide décrit les langages utilisés, leur rôle, et la manière dont la CLI AtlasXSEC peut unifier ces scripts sous une interface unique.
+
+---
+
+Objectif de la CLI AtlasXSEC
+La CLI a pour but de fournir une interface simple et cohérente pour exécuter toutes les opérations essentielles du framework :
+
+- Build multi‑modules  
+- Packaging ZIP + hash  
+- Mise à jour du manifeste  
+- Vérification d’intégrité  
+- Diagnostic complet  
+- Création de nouveaux modules  
+
+Chaque commande de la CLI appelle un script écrit dans un langage adapté à la tâche.
+
+---
+
+Langages utilisés dans les scripts
+Les scripts AtlasXSEC sont disponibles dans plusieurs langages. Chacun a été choisi pour un usage précis.
+
+Bash
+Utilisé pour les environnements Linux/macOS.  
+Idéal pour les opérations shell rapides, les pipelines et les commandes Gradle.
+
+PowerShell
+Utilisé pour Windows et les environnements d’entreprise.  
+Très efficace pour manipuler des fichiers, des objets et des structures JSON.
+
+Python
+Langage universel, parfait pour les pipelines CI/CD et les scripts complexes.  
+Utilisé pour les opérations nécessitant parsing JSON, hashing, ou logique avancée.
+
+Ruby
+Langage expressif et élégant, utilisé pour des scripts plus structurés et maintenables.  
+Adapté aux workflows internes et aux opérations nécessitant une gestion d’erreurs propre.
+
+Node.js
+Langage moderne basé sur JavaScript.  
+Utilisé pour les scripts asynchrones, les environnements web, et les pipelines modernes.
+
+COBOL
+Langage historique, rarement utilisé aujourd’hui.  
+Présent dans AtlasXSEC pour démonstration technique et compatibilité legacy.
+
+---
+
+Pourquoi plusieurs langages ?
+AtlasXSEC vise une compatibilité maximale.  
+Chaque langage apporte un avantage spécifique :
+
+- Bash : rapidité et simplicité Unix  
+- PowerShell : puissance Windows  
+- Python : portabilité et robustesse  
+- Ruby : lisibilité et élégance  
+- Node.js : modernité et asynchronisme  
+- COBOL : démonstration et compatibilité legacy  
+
+Cette approche multi‑langage permet d’utiliser AtlasXSEC dans n’importe quel environnement technique.
+
+---
+
+Structure de la CLI
+La CLI AtlasXSEC peut être organisée autour de commandes principales :
+
+Commandes principales
+- atlas build  
+  Compile tous les modules du framework.
+
+- atlas package  
+  Crée les archives ZIP et génère les hash SHA‑256.
+
+- atlas manifest update  
+  Met à jour le manifeste central avec les nouveaux hash.
+
+- atlas integrity  
+  Vérifie l’intégrité des modules.
+
+- atlas diag  
+  Exécute un diagnostic complet de l’écosystème.
+
+- atlas module create <nom>  
+  Génère un nouveau module avec sa structure et son entrée dans le manifeste.
+
+---
+
+Comment la CLI choisit le langage à utiliser
+Chaque commande peut être mappée à un script dans un langage différent.  
+Exemples :
+
+- atlas build → Node.js (exécution rapide et moderne)  
+- atlas package → Python (hashing + ZIP fiable)  
+- atlas manifest update → Ruby (manipulation JSON propre)  
+- atlas integrity → Bash (simple et direct)  
+- atlas diag → Python (analyse complète)  
+- atlas module create → Node.js ou Ruby (génération de fichiers)  
+
+Cette modularité permet d’utiliser le meilleur langage pour chaque tâche.
+
+---
+
+Avantages de cette approche
+- Compatibilité totale entre systèmes  
+- Scripts interchangeables  
+- Maintenance facilitée  
+- Possibilité d’évolution future  
+- Flexibilité pour les environnements CI/CD  
+- Robustesse grâce à la redondance multi‑langage  
+
+---
+
+Conclusion
+AtlasXSEC adopte une approche unique : une CLI unifiée reposant sur une collection de scripts écrits dans plusieurs langages complémentaires.  
+Cette architecture garantit une grande flexibilité, une compatibilité maximale et une robustesse adaptée aux environnements professionnels, forensic et sécurité.
