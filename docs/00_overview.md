@@ -1,79 +1,93 @@
-AtlasXSEC — Architecture
+00_overview.md
 
-Structure globale du framework
-AtlasXSEC repose sur une architecture modulaire pensée pour être lisible, extensible et maintenable. Chaque composant est isolé dans un module dédié, avec des responsabilités clairement définies. Cette séparation stricte permet d’ajouter, remplacer ou améliorer des fonctionnalités sans perturber le reste de la suite.
+🎯 Vision du projet
 
-L’architecture se compose de plusieurs couches :
+AtlasXSEC est une suite modulaire de sécurité et de forensic Android conçue pour offrir une architecture professionnelle, extensible et documentée. Le projet vise à fournir un ensemble cohérent d’outils capables d’analyser, extraire, corréler et présenter des artefacts Android dans un cadre reproductible et maintenable.
 
-- Couche Application : interface principale, orchestration, logique utilisateur.
-- Couche Services de Sécurité : gestion des permissions, politiques, contrôles d’accès.
-- Couche Moteur de Sécurité : analyse comportementale, détection, instrumentation.
-- Couche Forensic Core : extraction, parsing, normalisation des artefacts.
-- Couche Sandbox : exécution isolée, monitoring, instrumentation dynamique.
-- Couche Reporting : génération de rapports structurés, formats exportables.
-- Couche Web & Headless : extraction sémantique, navigation headless, benchmarking.
+L’objectif est de combiner rigueur technique, expérience développeur, et identité créative, afin de produire un écosystème qui puisse évoluer naturellement vers un standard open‑source de référence.
 
-Chaque couche communique via des interfaces standardisées, principalement en JSON structuré ou SOM (Semantic Object Model).
+---
 
-Principes d’architecture
-Plusieurs principes guident la conception d’AtlasXSEC :
+🧩 Architecture générale
 
-Modularité
-Chaque module est autonome, versionné et documenté. Les dépendances sont minimisées pour éviter les couplages forts.
+La suite est organisée autour de plusieurs modules indépendants mais interopérables :
 
-Isolation
-Les opérations sensibles (sandbox, extraction, web headless) sont exécutées dans des environnements contrôlés afin de réduire les risques d’exécution.
+- forensic-core  
+  Extraction, parsing et normalisation des artefacts Android.  
+  Fournit les API internes, les conventions de données et les pipelines d’analyse.
 
-Extensibilité
-L’architecture permet d’ajouter facilement de nouveaux modules, moteurs d’analyse ou pipelines.
+- reporting  
+  Génération de rapports professionnels (HTML, Markdown, JSON).  
+  Intègre un moteur de templates, des conventions visuelles et des exports reproductibles.
 
-Observabilité
-Les logs, traces et rapports sont normalisés pour faciliter la corrélation et l’analyse.
+- sandbox  
+  Environnement contrôlé pour exécuter, tester et valider les modules.  
+  Permet l’isolation, la simulation et la vérification automatisée.
 
-Multi‑plateforme
-Les scripts et outils sont conçus pour fonctionner sur Linux, Windows et macOS, avec des comportements cohérents.
+- app
+  Ensemble d’outils en ligne de commande pour orchestrer les modules, automatiser les workflows et faciliter l’intégration CI/CD.
 
-Diagramme conceptuel (description textuelle)
-L’architecture peut être visualisée comme une pile verticale :
+- docs/  
+  Documentation structurée, progressive et modulaire couvrant architecture, modules, conventions, pipelines et guides d’utilisation.
 
-- Application Layer  
-  Interface utilisateur, orchestration, gestion des modules.
+---
 
-- Security Services Layer  
-  Permissions, politiques, gestion des accès, règles de sécurité.
+🏗️ Principes fondamentaux
 
-- Security Engine Layer  
-  Analyse comportementale, détection d’anomalies, instrumentation.
+- Modularité stricte  
+  Chaque composant doit être autonome, testable et remplaçable.
 
-- Forensic Core Layer  
-  Extraction d’artefacts, parsing, normalisation, stockage temporaire.
+- Convention over configuration  
+  Les conventions de nommage, structure et pipelines sont définies pour réduire la friction et garantir la cohérence.
 
-- Sandbox Layer  
-  Exécution isolée, monitoring dynamique, instrumentation.
+- Cross‑platform  
+  Scripts, outils et workflows doivent fonctionner sous Linux, Windows (CMD + PowerShell) et macOS.
 
-- Reporting Layer  
-  Génération de rapports, formats exportables, visualisation.
+- Documentation comme produit  
+  Chaque module possède sa propre documentation, son schéma d’architecture et ses exemples d’usage.
 
-- Web Tools Layer  
-  Navigateurs textuels, moteurs headless, extraction SOM, benchmarking.
+- Extensibilité  
+  L’écosystème doit permettre l’ajout de nouveaux modules sans casser les existants.
 
-Chaque couche peut être activée ou désactivée selon les besoins du pipeline.
+---
 
-Interactions entre modules
-Les modules communiquent via des interfaces standardisées :
+🔍 Cas d’usage principaux
 
-- JSON pour les données structurées.
-- SOM pour les analyses web sémantiques.
-- Logs normalisés pour la traçabilité.
-- Pipelines pour enchaîner extraction → analyse → rapport.
+- Analyse forensic d’appareils Android (fichiers, bases SQLite, logs, artefacts système).
+- Extraction automatisée d’artefacts à partir d’images ou de dumps.
+- Génération de rapports professionnels pour audits, investigations ou conformité.
+- Intégration dans des pipelines CI/CD pour tests de sécurité automatisés.
+- Sandbox pour expérimenter, valider et documenter les modules.
 
-Cette approche garantit une compatibilité durable, même lorsque des modules évoluent indépendamment.
+---
 
-Avantages de cette architecture
-- Maintenance facilitée grâce à la séparation des responsabilités.
-- Possibilité d’intégrer des technologies modernes (Rust, headless, IA).
-- Robustesse accrue via l’isolation et la sandbox.
-- Documentation claire et évolutive.
-- Adaptation naturelle aux environnements forensic et sécurité.
+📦 Structure du dépôt
+
+`
+AtlasXSEC/ structure.md
+`
+
+---
+
+🚀 Roadmap synthétique
+
+- Finalisation de l’architecture modulaire.
+- Stabilisation du pipeline forensic-core.
+- Intégration du moteur de reporting.
+- Mise en place du sandbox et des tests automatisés.
+- Consolidation de la documentation et des conventions.
+- Préparation d’une première release publique.
+
+---
+
+🔗 Philosophie du projet
+
+AtlasXSEC est pensé comme un produit, pas seulement un ensemble d’outils.  
+Chaque module, chaque script, chaque document doit refléter :
+
+- une intention claire,  
+- une identité cohérente,  
+- une qualité professionnelle,  
+- une extensibilité assumée.
 
 ---
