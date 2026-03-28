@@ -1,5 +1,3 @@
----
-
 📘 20internalaudit_manual.md — Manuel d’Audit Interne AtlasXSEC
 
 Objectifs de l’audit interne
