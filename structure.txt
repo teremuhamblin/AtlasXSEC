@@ -4,22 +4,19 @@
 Security-APK/
 │
 ├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── AndroidManifest.xml
-│   │   │   ├── src/main/java/com/themaddogtmdg/securityapp/
-│   │   │   │   ├── ui/
-│   │   │   │   ├── viewmodel/
-│   │   │   │   ├── di/
-│   │   │   │   ├── navigation/
-│   │   │   │   ├── utils/
-│   │   │   │   ├── core/
-│   │   │   │   └── SecurityApp.kt
-│   │   │   ├── res/
-│   │   │   └── assets/
-│   │   └── test/
-│   │
-│   └── build.gradle
+│   ├── src/main/
+│   │   ├── AndroidManifest.xml
+│   │   ├── src/main/java/com/themaddogtmdg/securityapp/
+│   │   │   ├── ui/
+│   │   │   ├── viewmodel/
+│   │   │   ├── di/
+│   │   │   ├── navigation/
+│   │   │   ├── utils/
+│   │   │   ├── core/
+│   │   │   └── SecurityApp.kt
+│   │   ├── res/
+│   │   └── assets/
+│   └── test/
 │
 ├── security-engine/
 │   ├── src/main/java/com/themaddogtmdg/securityengine/
@@ -29,14 +26,12 @@ Security-APK/
 │   │   ├── storage/
 │   │   ├── auth/
 │   │   └── SecurityEngine.kt
-│   └── build.gradle
 │
 ├── security-services/
 │   ├── src/main/java/com/themaddogtmdg/securityservices/
 │   │   ├── monitoring/
 │   │   ├── background/
 │   │   └── alerts/
-│   └── build.gradle
 │
 ├── forensic-core/
 │   ├── src/main/java/com/themaddogtmdg/forensiccore/
@@ -45,7 +40,6 @@ Security-APK/
 │   │   ├── fileanalysis/
 │   │   ├── metadata/
 │   │   └── ForensicCore.kt
-│   └── build.gradle
 │
 ├── reports/
 │   ├── src/main/java/com/themaddogtmdg/reports/
@@ -54,7 +48,6 @@ Security-APK/
 │   │   ├── html/
 │   │   ├── templates/
 │   │   └── ReportGenerator.kt
-│   └── build.gradle
 │
 ├── sandbox/
 │   ├── src/main/java/com/themaddogtmdg/sandbox/
@@ -62,7 +55,19 @@ Security-APK/
 │   │   ├── integrity/
 │   │   ├── virtualization/
 │   │   └── SandboxManager.kt
-│   └── build.gradle
+│
+├── docs/
+│   ├── 00_overview.md
+│   ├── 01_architecture.md
+│   ├── 02_app_module.md
+│   ├── 03_security_engine.md
+│   ├── 04_security_services.md
+│   ├── 05_forensic_core.md
+│   ├── 06_reports.md
+│   ├── 07_sandbox.md
+│   ├── 08_permissions_security.md
+│   ├── 09_forensic_flow.md
+│   └── 10_contributing.md
 │
 ├── build.gradle
 └── settings.gradle
