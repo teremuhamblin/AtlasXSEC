@@ -17,6 +17,7 @@ Objectifs
 - Isolation interne via sandbox  
 
 Architecture globale
+- docs : do umentation
 - app/ : interface, navigation, DI, ViewModels  
 - security-engine/ : moteur de sécurité  
 - security-services/ : services Android  
