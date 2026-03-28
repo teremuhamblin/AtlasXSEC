@@ -5,7 +5,7 @@
 — docs/00_overview.md
 
 Vision du projet
-AtlasXSEC est une application Android modulaire dédiée à la sécurité mobile, à l’analyse forensic et à la surveillance d’intégrité.  
+- AtlasXSEC est une application Android modulaire dédiée à la sécurité mobile, à l’analyse forensic et à la surveillance d’intégrité.  
 Elle repose sur une architecture multi‑modules, MVVM, Kotlin, AndroidX et un moteur de sécurité isolé.
 
 Objectifs
