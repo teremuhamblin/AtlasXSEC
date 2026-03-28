@@ -1,0 +1,145 @@
+---
+
+utilisation_scripts.txt
+
+Présentation générale
+Les scripts AtlasXSEC sont fournis dans plusieurs langages de programmation afin d’assurer une compatibilité maximale entre différents environnements (Linux, macOS, Windows, CI/CD, systèmes legacy). Chaque langage possède ses forces, ses limites et ses usages privilégiés.
+
+Ce document explique les langages utilisés, leur rôle, et dans quels cas les employer.
+
+---
+
+Bash (Linux / macOS)
+Bash est le langage de script le plus courant sur les systèmes Unix.  
+Il est idéal pour les opérations rapides, les pipelines shell, les manipulations de fichiers et l’exécution de commandes système.
+
+Usage recommandé :  
+- Automatisation locale sous Linux/macOS  
+- CI/CD sur serveurs Unix  
+- Scripts simples et rapides  
+
+Avantages :  
+- Très léger  
+- Déjà installé sur la plupart des systèmes  
+- Parfait pour orchestrer des commandes Gradle, zip, sha256sum  
+
+Limites :  
+- Peu portable sur Windows  
+- Syntaxe parfois difficile à maintenir  
+
+---
+
+PowerShell (Windows et cross‑platform)
+PowerShell est le langage natif Windows, mais fonctionne aussi sur Linux/macOS via PowerShell Core.
+
+Usage recommandé :  
+- Automatisation sur Windows  
+- Environnements d’entreprise  
+- Scripts nécessitant une bonne gestion des objets  
+
+Avantages :  
+- Très puissant pour manipuler fichiers, JSON, registres  
+- Syntaxe moderne  
+- Compatible multi‑plateforme  
+
+Limites :  
+- Moins naturel pour les développeurs Unix  
+- Plus verbeux que Bash  
+
+---
+
+Python (universel, idéal CI/CD)
+Python est un langage polyvalent, lisible et très utilisé dans l’automatisation moderne.
+
+Usage recommandé :  
+- Pipelines CI/CD  
+- Scripts complexes (JSON, fichiers, hashing)  
+- Compatibilité maximale entre OS  
+
+Avantages :  
+- Très lisible  
+- Bibliothèques puissantes  
+- Fonctionne partout  
+
+Limites :  
+- Nécessite une installation Python  
+- Moins adapté aux scripts ultra‑simples  
+
+---
+
+Ruby (lisible, élégant, scripting avancé)
+Ruby est un langage expressif, idéal pour des scripts plus structurés ou orientés objets.
+
+Usage recommandé :  
+- Automatisation propre et maintenable  
+- Scripts nécessitant une logique avancée  
+- Environnements où Ruby est déjà présent  
+
+Avantages :  
+- Syntaxe très lisible  
+- Gestion d’erreurs élégante  
+- Bon compromis entre simplicité et puissance  
+
+Limites :  
+- Moins répandu que Python  
+- Pas toujours installé par défaut  
+
+---
+
+Node.js (JavaScript côté serveur)
+Node.js permet d’écrire des scripts en JavaScript, ce qui est utile dans les environnements modernes ou orientés web.
+
+Usage recommandé :  
+- Pipelines modernes (GitHub Actions, GitLab CI)  
+- Automatisation dans des projets déjà basés sur JS  
+- Scripts nécessitant des opérations asynchrones  
+
+Avantages :  
+- Très rapide pour I/O  
+- Syntaxe moderne  
+- Large écosystème npm  
+
+Limites :  
+- Nécessite Node installé  
+- Moins adapté aux scripts shell très simples  
+
+---
+
+COBOL (rare, historique, démonstratif)
+COBOL est un langage ancien, encore utilisé dans les banques et mainframes.  
+Dans AtlasXSEC, il sert surtout d’exemple de portage extrême.
+
+Usage recommandé :  
+- Démonstration technique  
+- Compatibilité avec systèmes legacy  
+- Expérimentation  
+
+Avantages :  
+- Très stable  
+- Syntaxe ultra‑structurée  
+
+Limites :  
+- Très rare aujourd’hui  
+- Peu adapté à l’automatisation moderne  
+- Nécessite GnuCOBOL  
+
+---
+
+Résumé comparatif
+
+| Langage | Plateformes | Complexité | Usage idéal |
+|--------|-------------|------------|-------------|
+| Bash | Linux/macOS | Simple | Automatisation Unix |
+| PowerShell | Windows / cross‑platform | Moyenne | Automatisation Windows |
+| Python | Tous | Faible | CI/CD, scripts avancés |
+| Ruby | Tous | Moyenne | Scripts propres et maintenables |
+| Node.js | Tous | Moyenne | Automatisation moderne |
+| COBOL | Legacy | Élevée | Démonstration / systèmes anciens |
+
+---
+
+Conclusion
+Chaque langage a été choisi pour couvrir un besoin spécifique :  
+- Bash / PowerShell pour la compatibilité système  
+- Python / Ruby / Node.js pour la flexibilité et la maintenabilité  
+- COBOL pour la rareté et la démonstration technique  
