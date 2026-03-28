@@ -33,15 +33,7 @@ Architecture globale
 Structure générale
 
 `
-Security-APK/
-│
-├── app/
-├── security-engine/
-├── security-services/
-├── forensic-core/
-├── reports/
-├── sandbox/
-└── docs/
+Référencer à AtlasXSEC/ structure.md
 `
 
 Rôle de chaque module
